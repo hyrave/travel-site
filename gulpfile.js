@@ -3,7 +3,8 @@ watch = require('gulp-watch'),
 postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'),
 cssvars = require('postcss-simple-vars'),
-nested = require('postcss-nested');
+nested = require('postcss-nested'),
+cssimport = require('postcss-import');
 
 gulp.task('html', function(done) {
     console.log("imagine something useful being run in html here");
@@ -13,7 +14,7 @@ gulp.task('html', function(done) {
 gulp.task('styles', function(done) {
     //console.log("css task running here");
     return gulp.src('./app/assets/styles/styles.css')
-        .pipe(postcss([cssvars, nested, autoprefixer]))
+        .pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
         .pipe(gulp.dest('./app/temp/styles'));
     done();
 })
@@ -32,5 +33,5 @@ gulp.task('default', gulp.series((done) => {
 
 gulp.task('watch', function() {
     watch('./app/index.html', {usePolling: true },  gulp.series('html'));
-    watch('./app/assets/styles/*.css', {usePolling: true }, gulp.series('styles'));
+    watch('./app/assets/**/*.css', {usePolling: true }, gulp.series('styles'));
 });
