@@ -1,0 +1,16 @@
+version: '3'
+services:
+    dev:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: hyrave/travel-site-node
+        volumes:
+            - ".:/usr/src/app"
+            - "./node_modules:/usr/src/app/node_modules"
+        environment: 
+            - NODE_ENV=development
+        working_dir: /usr/src/app
+        ports:
+            - 49160:8080
+        command: 'npm run start'
