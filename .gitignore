@@ -12,6 +12,8 @@
 node_modules/
 .tmp/
 Dockerfile
+*.dockerignore
+*.yml
 
 # OS or Editor folders
 .DS_Store

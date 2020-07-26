@@ -1,11 +1,9 @@
-body { 
-    color: green;
-}
-
-$mainBLue: #2f5572;
-
-.large-hero {
-    h2 {
-        color:$mainBLue;
-    }
-}
+@import 'normalize.css';
+@import 'base/_global';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'modules/_large-hero';
+@import 'modules/_btn';
+@import 'modules/_wrapper';
+@import 'modules/_page-section';
+@import 'modules/_headline';

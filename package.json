@@ -4,7 +4,7 @@
   "description": "Travel Site the Udemy Training",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack --hmr-port 49160",
+    "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serv": "node server.js",
     "start": "npm run serv & npm run dev"
@@ -28,11 +28,14 @@
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "css-loader": "^3.6.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.3",
     "postcss-nested": "^4.2.3",
     "postcss-simple-vars": "^5.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
