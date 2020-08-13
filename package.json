@@ -22,6 +22,7 @@
   "homepage": "https://github.com/hyrave/travel-site#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "lazysizes": "^5.2.2",
     "lodash": "^4.17.19",
     "normalize.css": "^8.0.1"
   },
